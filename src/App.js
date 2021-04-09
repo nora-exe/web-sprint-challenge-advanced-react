@@ -6,6 +6,9 @@ import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
 
+import useMedia from "./hooks/useMedia";
+import useDarkMode from "./hooks/useDarkMode";
+
 import "./App.css";
 
 function App() {
@@ -22,13 +25,32 @@ function App() {
     setCart(cart.filter((p) => p.id !== plant.id));
   };
 
+  //* implementing useMedia from https://usehooks.com/useDarkMode/
+  const [darkMode, setDarkMode] = useDarkMode(useMedia(["(prefers-color-scheme: dark)"], [true], false));
+
+
+  const toggleMode = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div>
+    <div className={darkMode ? "dark-mode" : ""}>
       <Router>
         <nav className="container">
           <h1>
             React Plants <span role="img">🌿</span>
           </h1>
+          {/* //TODO dark mode toggle */}
+          <div>
+            Toggle Dark Mode:
+          </div>
+          <div className="dark-mode__toggle">
+          <div
+            onClick={toggleMode}
+            className={darkMode ? 'toggle toggled' : 'toggle'}
+          />
+          </div>
           <ul className="steps">
             <li>
               <NavLink exact to="/">
