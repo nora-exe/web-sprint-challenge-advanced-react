@@ -131,14 +131,4 @@ test("displays plants in cart", () => {
 * [ ] Check codegrade on Monday following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
 * [ ] Any changes pushed to your <firstName-lastName> branch will resubmited to codegrade if pushed before the sprint challenge deadline. Changes after the deadline will not be reviewed.
 
-## Interview Questions
 
-Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
-
-1. What are the main differences between a stateful and a functional component?
-
-2. When does a componentWillMount function be called? What about a componentWillUpdate?
-
-3. Define stateful logic.
-
-4. What are the three step of creating a successful test? What is done in each phase?
